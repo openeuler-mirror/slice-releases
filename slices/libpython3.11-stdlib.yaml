@@ -1,0 +1,466 @@
+package: python3
+
+# The parts in this download have been grouped with inspiration from the
+# Python 3.11 Standard Library
+# (https://docs.python.org/3.11/library/index.html).
+#
+# Aside from the "core" parts which contains the minimal libraries that
+# should come from this download and the "extra" parts which contains
+# miscellaneous libraries, all the other parts definitions are sorted by
+# their names. The "core" parts is placed at the very beginning and the
+# "extra" parts at the very end.
+slices:
+  # The "core" parts provides a very minimal libpython3.11-stdlib
+  core:
+    deps:
+      - libbz2-1.0_libs
+      - libc6_libs
+      # Adding libgcc-s1 here because it is required for the arm arch.
+      # In practice, libc6 should bring it anyway, BUT, there is a circular
+      # dependency in the archives, where libc6 depends on libgcc-s1 and
+      # vice versa. We don't allow that circular dependency to exist in Chisel
+      # and libgcc-s1 already depends on libc6, so we'll have to include this
+      # line here, explicitly.
+      - libgcc-s1_libs
+      - liblzma5_libs
+      - libpython3.11-minimal_libs
+      - media-types_data
+    contents:
+      common:
+        /usr/lib64/python3.11/_bootsubprocess.py:
+        /usr/lib64/python3.11/_compression.py:
+        /usr/lib64/python3.11/bz2.py:
+        /usr/lib64/python3.11/contextvars.py:
+        /usr/lib64/python3.11/dataclasses.py:
+        /usr/lib64/python3.11/gettext.py:
+        /usr/lib64/python3.11/gzip.py:
+        /usr/lib64/python3.11/http/__init__.py:
+        /usr/lib64/python3.11/http/client.py:
+
+        /usr/lib64/python3.11/lib-dynload/_bz2.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_codecs_*.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_contextvars.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_lzma.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_multibytecodec.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_queue.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_typing.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/mmap.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_bisect.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_blake2.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_csv.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_datetime.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_elementtree.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_gdbm.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_heapq.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_md5.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_opcode.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_pickle.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_posixsubprocess.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_random.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_sha1.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_sha256.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_sha3.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_sha512.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_socket.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_statistics.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_struct.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_testclinic.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/array.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/binascii.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/cmath.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/fcntl.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/grp.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/math.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/pyexpat.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/select.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/spwd.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/syslog.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/unicodedata.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/zlib.cpython-311-*-linux-*.so:
+
+        /usr/lib64/python3.11/lzma.py:
+        /usr/lib64/python3.11/mimetypes.py:
+        /usr/lib64/python3.11/ntpath.py:
+        /usr/lib64/python3.11/queue.py:
+        /usr/lib64/python3.11/shutil.py:
+        /usr/lib64/python3.11/socketserver.py:
+        /usr/lib64/python3.11/tarfile.py:
+
+  # Shared AIX (IBM) support functions
+  aix-support:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/_aix_support.py:
+
+  # Generic Operating System Services
+  # https://docs.python.org/3.11/library/allos.html
+  all-os:
+    deps:
+      - libffi8_libs
+      - libncursesw6_libs
+      - libpython3.11-stdlib_core
+      - libpython3.11-stdlib_unix
+      - libtinfo6_libs
+    contents:
+      common:
+        /usr/lib64/python3.11/_pyio.py:
+        /usr/lib64/python3.11/ctypes/**:
+        /usr/lib64/python3.11/curses/**:
+        /usr/lib64/python3.11/getpass.py:
+        /usr/lib64/python3.11/lib-dynload/_ctypes*.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_curses*.cpython-311-*-linux-*.so:
+
+  # Concurrent Execution
+  # https://docs.python.org/3.11/library/concurrency.html
+  concurrency:
+    deps:
+      - libpython3.11-stdlib_all-os
+      - libpython3.11-stdlib_core
+      - libpython3.11-stdlib_crypto
+    contents:
+      common:
+        /usr/lib64/python3.11/concurrent/**:
+        /usr/lib64/python3.11/lib-dynload/_multiprocessing.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_posixshmem.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/multiprocessing/**:
+        /usr/lib64/python3.11/sched.py:
+
+  # Cryptographic Services
+  # https://docs.python.org/3.11/library/crypto.html
+  crypto:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/hmac.py:
+        /usr/lib64/python3.11/secrets.py:
+
+  # Custom Python Interpreters
+  # https://docs.python.org/3.11/library/custominterp.html
+  custom-interpreters:
+    deps:
+      - libpython3.11-stdlib_core
+      - libpython3.11-stdlib_text
+    contents:
+      common:
+        /usr/lib64/python3.11/code.py:
+        /usr/lib64/python3.11/codeop.py:
+
+  # Data Persistence
+  # https://docs.python.org/3.11/library/persistence.html
+  data-persistence:
+    deps:
+      - libdb5.3_libs
+      - libpython3.11-stdlib_core
+      - libsqlite3-0_libs
+    contents:
+      common:
+        /usr/lib64/python3.11/dbm/**:
+        /usr/lib64/python3.11/lib-dynload/_dbm.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_sqlite3.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/shelve.py:
+        /usr/lib64/python3.11/sqlite3/**:
+
+  # Data Types
+  # https://docs.python.org/3.11/library/datatypes.html
+  data-types:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/graphlib.py:
+        /usr/lib64/python3.11/lib-dynload/_zoneinfo.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/pprint.py:
+        /usr/lib64/python3.11/zoneinfo/**:
+
+  # Debugging and Profiling
+  # https://docs.python.org/3.11/library/debug.html
+  debug:
+    deps:
+      - libpython3.11-stdlib_core
+      - libpython3.11-stdlib_custom-interpreters
+      - libpython3.11-stdlib_data-types
+      - libpython3.11-stdlib_frameworks
+      - libpython3.11-stdlib_text
+    contents:
+      common:
+        /usr/lib64/python3.11/bdb.py:
+        /usr/lib64/python3.11/cProfile.py:
+        /usr/lib64/python3.11/lib-dynload/_lsprof.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/pdb.py:
+        /usr/lib64/python3.11/profile.py:
+        /usr/lib64/python3.11/pstats.py:
+        /usr/lib64/python3.11/timeit.py:
+        /usr/lib64/python3.11/trace.py:
+
+  # Development Tools
+  # https://docs.python.org/3.11/library/development.html
+  development-tools:
+    deps:
+      - libpython3.11-stdlib_all-os
+      - libpython3.11-stdlib_concurrency
+      - libpython3.11-stdlib_core
+      - libpython3.11-stdlib_data-types
+      - libpython3.11-stdlib_debug
+      - libpython3.11-stdlib_distribution
+      - libpython3.11-stdlib_internet
+      - libpython3.11-stdlib_ipc
+      - libpython3.11-stdlib_markup-tools
+      - libpython3.11-stdlib_net-data
+      - libpython3.11-stdlib_numeric
+      - libpython3.11-stdlib_text
+      - libpython3.11-stdlib_unix
+    contents:
+      common:
+        /usr/lib64/python3.11/__phello__/**:
+        /usr/lib64/python3.11/doctest.py:
+#        /usr/lib64/python3.11/lib-dynload/_testbuffer.cpython-311-*-linux-*.so: (无)
+#        /usr/lib64/python3.11/lib-dynload/_testcapi.cpython-311-*-linux-*.so: (无)
+#        /usr/lib64/python3.11/lib-dynload/_testimportmultiple.cpython-311-*-linux-*.so: (无)
+#        /usr/lib64/python3.11/lib-dynload/_testinternalcapi.cpython-311-*-linux-*.so: (无)
+        /usr/lib64/python3.11/lib-dynload/_testmultiphase.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/_xxsubinterpreters.cpython-311-*-linux-*.so:
+#        /usr/lib64/python3.11/lib-dynload/_xxtestfuzz.cpython-311-*-linux-*.so: (无)
+        /usr/lib64/python3.11/lib-dynload/xxlimited.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/xxlimited_35.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/test/**:
+        /usr/lib64/python3.11/unittest/**:
+
+  # Software Packaging and Distribution
+  # https://docs.python.org/3.11/library/distribution.html
+  distribution:
+    deps:
+      - libpython3.11-stdlib_core
+      - libpython3.11-stdlib_osx-support
+    contents:
+      common:
+#       /usr/lib64/python3.11/_distutils_system_mod.py: (无)
+        # Due to conflicts with python3-distutils_python3-11 and chisel not being able to
+        # reconcile 2 parts with globs on the same folder, I have to specify the files explicitly
+        /usr/lib64/python3.11/distutils/__init__.py:
+        /usr/lib64/python3.11/distutils/version.py:
+        /usr/lib64/python3.11/venv/**:
+        /usr/lib64/python3.11/zipapp.py:
+
+  # File Formats
+  # https://docs.python.org/3.11/library/fileformats.html
+  file-formats:
+    deps:
+      - libpython3.11-stdlib_core
+      - libpython3.11-stdlib_frameworks
+      - libpython3.11-stdlib_markup-tools
+    contents:
+      common:
+        /usr/lib64/python3.11/netrc.py:
+        /usr/lib64/python3.11/plistlib.py:
+        /usr/lib64/python3.11/tomllib/**:
+        /usr/lib64/python3.11/xdrlib.py:
+
+  # File and Directory Access
+  # https://docs.python.org/3.11/library/filesys.html
+  filesys:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/fileinput.py:
+
+  # Program Frameworks
+  # https://docs.python.org/3.11/library/frameworks.html
+  frameworks:
+    deps:
+      - libpython3.11-stdlib_core
+      - libpython3.11-stdlib_text
+    contents:
+      common:
+        /usr/lib64/python3.11/cmd.py:
+        /usr/lib64/python3.11/shlex.py:
+#        /usr/lib64/python3.11/turtle.py: (无)
+
+  # Importing Modules
+  # https://docs.python.org/3.11/library/modules.html
+  importing:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/modulefinder.py:
+
+  # Internet Protocols and Support
+  # https://docs.python.org/3.11/library/internet.html
+  internet:
+    deps:
+      - libpython3.11-stdlib_core
+      - libpython3.11-stdlib_crypto
+      - libpython3.11-stdlib_file-formats
+      - libpython3.11-stdlib_frameworks
+      - libpython3.11-stdlib_ipc
+      - libpython3.11-stdlib_markup-tools
+      - libpython3.11-stdlib_numeric
+      - libpython3.11-stdlib_pydoc
+      - libuuid1_libs
+    contents:
+      common:
+        /usr/lib64/python3.11/cgi.py:
+        /usr/lib64/python3.11/cgitb.py:
+        /usr/lib64/python3.11/ftplib.py:
+        /usr/lib64/python3.11/http/cookiejar.py:
+        /usr/lib64/python3.11/http/cookies.py:
+        /usr/lib64/python3.11/http/server.py:
+        /usr/lib64/python3.11/imaplib.py:
+        /usr/lib64/python3.11/lib-dynload/_uuid.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/nntplib.py:
+        /usr/lib64/python3.11/nturl2path.py:
+        /usr/lib64/python3.11/poplib.py:
+        /usr/lib64/python3.11/smtpd.py:
+        /usr/lib64/python3.11/smtplib.py:
+        /usr/lib64/python3.11/telnetlib.py:
+        /usr/lib64/python3.11/uuid.py:
+        /usr/lib64/python3.11/webbrowser.py:
+        /usr/lib64/python3.11/wsgiref/**:
+        /usr/lib64/python3.11/xmlrpc/**:
+
+  # Networking and Interprocess Communication
+  # https://docs.python.org/3.11/library/ipc.html
+  ipc:
+    deps:
+      - libpython3.11-stdlib_concurrency
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/asynchat.py:
+        /usr/lib64/python3.11/asyncio/**:
+        /usr/lib64/python3.11/asyncore.py:
+        /usr/lib64/python3.11/lib-dynload/_asyncio.cpython-311-*-linux-*.so:
+
+  # Python Language Services
+  # https://docs.python.org/3.11/library/language.html
+  language:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/pickletools.py:
+        /usr/lib64/python3.11/pyclbr.py:
+        /usr/lib64/python3.11/symtable.py:
+        /usr/lib64/python3.11/tabnanny.py:
+
+  # Structured Markup Processing Tools (HTML, XML)
+  # https://docs.python.org/3.11/library/markup.html
+  markup-tools:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/_markupbase.py:
+        /usr/lib64/python3.11/html/**:
+        /usr/lib64/python3.11/xml/**:
+
+  # Multimedia Services
+  # https://docs.python.org/3.11/library/mm.html
+  multimedia:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/aifc.py:
+        /usr/lib64/python3.11/chunk.py:
+        /usr/lib64/python3.11/colorsys.py:
+        /usr/lib64/python3.11/imghdr.py:
+        /usr/lib64/python3.11/lib-dynload/audioop.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/ossaudiodev.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/sndhdr.py:
+        /usr/lib64/python3.11/sunau.py:
+        /usr/lib64/python3.11/wave.py:
+
+  # Internet Data Handling
+  # https://docs.python.org/3.11/library/netdata.html
+  net-data:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/json/**:
+        /usr/lib64/python3.11/lib-dynload/_json.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/mailbox.py:
+        /usr/lib64/python3.11/mailcap.py:
+
+  # Numeric and Mathematical Modules
+  # https://docs.python.org/3.11/library/numeric.html
+  numeric:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/_pydecimal.py:
+        /usr/lib64/python3.11/decimal.py:
+        /usr/lib64/python3.11/fractions.py:
+        /usr/lib64/python3.11/lib-dynload/_decimal.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/numbers.py:
+        /usr/lib64/python3.11/statistics.py:
+
+  # Shared OS X support functions
+  osx-support:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/_osx_support.py:
+
+  # pydoc - Documentation generator and online help system
+  # https://docs.python.org/3.11/library/pydoc.html
+  pydoc:
+    deps:
+      - libpython3.11-stdlib_core
+    contents:
+      common:
+        /usr/lib64/python3.11/pydoc.py:
+        /usr/lib64/python3.11/pydoc_data/**:
+
+  # Text Processing Services
+  # https://docs.python.org/3.11/library/text.html
+  text:
+    deps:
+      - libpython3.11-stdlib_core
+      - libreadline8_libs
+      - libtinfo6_libs
+    contents:
+      common:
+        /usr/lib64/python3.11/difflib.py:
+        /usr/lib64/python3.11/lib-dynload/readline.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/rlcompleter.py:
+
+  # Unix Specific Services
+  # https://docs.python.org/3.11/library/unix.html
+  unix:
+    deps:
+      - libcrypt1_libs
+      - libnsl2_libs
+      - libpython3.11-stdlib_core
+      - libpython3.11-stdlib_frameworks
+      - libtirpc3_libs
+      - libselinux1_libs
+    contents:
+      common:
+        /usr/lib64/python3.11/crypt.py:
+        /usr/lib64/python3.11/lib-dynload/_crypt.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/nis.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/resource.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/lib-dynload/termios.cpython-311-*-linux-*.so:
+        /usr/lib64/python3.11/pipes.py:
+        /usr/lib64/python3.11/pty.py:
+        /usr/lib64/python3.11/tty.py:
+
+  # Outliers and Deprecated Modules
+  # The "extra" parts consists of easter-eggs and deprecated modules
+  extras:
+    deps:
+      - libpython3.11-stdlib_core
+      - libpython3.11-stdlib_internet
+    contents:
+      common:
+        /usr/lib64/python3.11/__hello__.py:
+        /usr/lib64/python3.11/antigravity.py:
+        /usr/lib64/python3.11/this.py:
