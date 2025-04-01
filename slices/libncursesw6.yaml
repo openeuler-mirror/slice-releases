@@ -1,0 +1,13 @@
+package: ncurses-libs
+
+slices:
+  libs:
+    deps:
+      - libc6_libs
+      - libtinfo6_libs
+    contents:
+      common:
+        /usr/lib64/libncursesw.so.6*:
+        /usr/lib64/libformw.so.6*:
+        /usr/lib64/libmenuw.so.6*:
+        /usr/lib64/libpanelw.so.6*:

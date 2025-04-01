@@ -1,0 +1,18 @@
+package: libnsl2
+
+deps:
+  - libnsl2_copyright
+
+slices:
+  libs:
+    deps:
+      - libc6_libs
+      - libtirpc3_libs
+    contents:
+      common:
+        /usr/lib64/libnsl.so*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/libnsl2/COPYING:
