@@ -1,0 +1,17 @@
+package: libgcc
+
+deps:
+  - libgcc-s1_copyright
+
+slices:
+  libs:
+    deps:
+      - libc6_libs
+    contents:
+      common:
+        /lib64/libgcc_s.so.*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/libgcc:

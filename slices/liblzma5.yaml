@@ -1,0 +1,12 @@
+package: xz-libs
+
+deps:
+  - liblzma5_copyright
+
+slices:
+  libs:
+    deps:
+      - libc6_libs
+    contents:
+      common:
+        /usr/lib64/liblzma.so.*:

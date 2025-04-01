@@ -1,0 +1,15 @@
+package: mailcap
+
+deps:
+  - media-types_copyright
+
+slices:
+  data:
+    contents:
+      common:
+        /etc/mime.types:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/mailcap/COPYING:

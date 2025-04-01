@@ -1,0 +1,22 @@
+package: openssl-libs
+
+deps:
+  - libssl3_copyright
+
+slices:
+  libs:
+    deps:
+      - libc6_libs
+    contents:
+      common:
+        /usr/lib64/engines-3/afalg.so:
+        /usr/lib64/engines-3/loader_attic.so:
+        /usr/lib64/engines-3/padlock.so:
+        /usr/lib64/libcrypto.so.*:
+        /usr/lib64/libssl.so.*:
+        /usr/lib64/ossl-modules/legacy.so:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/openssl-libs/LICENSE.txt:

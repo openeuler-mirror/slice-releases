@@ -1,0 +1,13 @@
+package: krb5-libs
+
+deps:
+  - libk5crypto3_copyright
+
+slices:
+  libs:
+    deps:
+      - libc6_libs
+      - libkrb5support0_libs
+    contents:
+      common:
+        /usr/lib64/libk5crypto.so.*:

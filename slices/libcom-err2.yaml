@@ -1,0 +1,17 @@
+package: e2fsprogs
+
+deps:
+  - libcom-err2_copyright
+
+slices:
+  libs:
+    deps:
+      - libc6_libs
+    contents:
+      common:
+        /usr/lib64/libcom_err.so.*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/e2fsprogs/NOTICE:
