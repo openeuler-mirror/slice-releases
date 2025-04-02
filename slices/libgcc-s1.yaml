@@ -10,6 +10,7 @@ slices:
     contents:
       common:
         /lib64/libgcc_s.so.*:
+        /lib64/libgcc_s-12.so*:
 
   copyright:
     contents:
