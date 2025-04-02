@@ -155,6 +155,7 @@ slices:
       - libdb5.3_libs
       - libpython3.11-stdlib_core
       - libsqlite3-0_libs
+      - libgdbm6_libs
     contents:
       common:
         /usr/lib64/python3.11/dbm/**:
