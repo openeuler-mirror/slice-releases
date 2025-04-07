@@ -1,0 +1,18 @@
+package: nss-util
+
+deps:
+  - libnss3_copyright
+
+slices:
+  libs:
+    deps:
+      - libc6_libs
+      - libnspr4_libs
+    contents:
+      common:
+        /usr/lib64/libnssutil3.so:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/nss-util/COPYING:

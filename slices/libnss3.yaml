@@ -1,0 +1,33 @@
+package: nss
+
+deps:
+  - libnss3_copyright
+
+slices:
+  libs:
+    deps:
+      - libnss3_nss
+      - libnss3_smime
+
+  nss:
+    deps:
+      - libc6_libs
+      - libnspr4_libs
+      - libsqlite3-0_libs
+      - libnss3-util_libs
+    contents:
+      common:
+        /usr/lib64/libnss3.so:
+
+  smime:
+    deps:
+      - libc6_libs
+      - libnspr4_libs
+    contents:
+      common:
+        /usr/lib64/libsmime3.so:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/nss/COPYING:

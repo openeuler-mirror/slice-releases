@@ -1,0 +1,7 @@
+package: tzdata-java-2024a
+
+slices:
+  tzdb:
+    contents:
+      common:
+        /usr/share/javazi-1.8/tzdb.dat:
