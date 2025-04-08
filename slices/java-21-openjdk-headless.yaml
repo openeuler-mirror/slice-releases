@@ -52,7 +52,7 @@ slices:
         /etc/java/java-21-openjdk/java-21-openjdk*/conf/security/java.policy:
         /etc/java/java-21-openjdk/java-21-openjdk*/conf/security/java.security:
         /usr/lib/jvm/java-21-openjdk-*/bin/java:
-          /usr/lib/jvm/java-21-openjdk-*/conf:
+        /usr/lib/jvm/java-21-openjdk-*/conf:
         /usr/lib/jvm/java-21-openjdk-*/conf/jaxp.properties:
         /usr/lib/jvm/java-21-openjdk-*/conf/logging.properties:
         /usr/lib/jvm/java-21-openjdk-*/conf/net.properties:
