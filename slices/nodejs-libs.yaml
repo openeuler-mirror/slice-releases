@@ -1,0 +1,29 @@
+package: nodejs-libs
+
+deps:
+  - nodejs-libs_copyright
+
+slices:
+  libs:
+    deps:
+      - brotli_libs
+      - glibc_libs
+      - c-ares_libs
+      - libgcc_libs
+      - libicu_libs
+      - libnghttp2_libs
+      - openssl-libs_libs
+      - libstdc++_libs
+      - libuv_libs
+      - nodejs-acorn_libs
+      # - node-cjs-module-lexer_libs
+      # - node-undici_libs
+      - zlib_libs
+    contents:
+      common:
+        /usr/lib64/libnode.so.115:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/nodejs-libs/LICENSE:

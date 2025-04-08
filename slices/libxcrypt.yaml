@@ -1,0 +1,17 @@
+package: libxcrypt
+
+deps:
+  - libxcrypt_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /lib64/libcrypt.so.*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/doc/libxcrypt1/copyright:

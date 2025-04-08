@@ -1,0 +1,24 @@
+package: libicu
+
+deps:
+  - libicu_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+      - libgcc_libs
+      - libstdc++_libs
+    contents:
+      common:
+        /usr/lib64/libicudata.so.74*:
+        /usr/lib64/libicui18n.so.74*:
+        /usr/lib64/libicuio.so.74*:
+        /usr/lib64/libicutest.so.74*:
+        /usr/lib64/libicutu.so.74*:
+        /usr/lib64/libicuuc.so.74*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/libicu/LICENSE:

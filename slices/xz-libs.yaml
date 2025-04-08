@@ -1,0 +1,12 @@
+package: xz-libs
+
+deps:
+  - xz-libs_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/liblzma.so.*:

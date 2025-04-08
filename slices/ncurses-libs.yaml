@@ -1,0 +1,24 @@
+package: ncurses-libs
+
+deps:
+  - ncurses-libs_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libtinfo.so.6*:
+        /usr/lib64/libtic.so.6*:
+
+  libncursesw6:
+    deps:
+      - glibc_libs
+      - ncurses-libs_libs
+    contents:
+      common:
+        /usr/lib64/libncursesw.so.6*:
+        /usr/lib64/libformw.so.6*:
+        /usr/lib64/libmenuw.so.6*:
+        /usr/lib64/libpanelw.so.6*:

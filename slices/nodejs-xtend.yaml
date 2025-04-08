@@ -1,0 +1,15 @@
+package: nodejs-xtend
+
+deps:
+  - nodejs-xtend_copyright
+
+slices:
+  libs:
+    contents:
+      common:
+        /usr/lib/node_modules/xtend/**:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/nodejs-xtend/LICENSE:

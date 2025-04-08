@@ -1,0 +1,46 @@
+package: krb5-libs
+
+deps:
+  - krb5-libs_copyright
+
+slices:
+  libkrb5-3:
+    deps:
+      - glibc_libs
+      - e2fsprogs_libs
+      - krb5-libs_libk5crypto3
+      - keyutils-libs_libs
+      - krb5-libs_libkrb5support0
+      - openssl-libs_libs
+    contents:
+      common:
+        /usr/lib64/krb5/plugins/libkrb5/:
+        /usr/lib64/krb5/plugins/preauth/spake.so:
+        /usr/lib64/libkrb5.so.*:
+
+  libgssapi-krb5-2:
+    deps:
+      - glibc_libs
+      - e2fsprogs_libs
+      - krb5-libs_libk5crypto3
+      - krb5-libs_libkrb5-3
+      - krb5-libs_libkrb5support0
+    contents:
+      common:
+        /etc/gss/mech.d/:
+        /usr/lib64/libgssapi_krb5.so.*:
+
+  libk5crypto3:
+    deps:
+      - glibc_libs
+      - krb5-libs_libkrb5support0
+    contents:
+      common:
+        /usr/lib64/libk5crypto.so.*:
+
+  libkrb5support0:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libkrb5support.so.*:

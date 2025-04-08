@@ -1,0 +1,17 @@
+package: keyutils-libs
+
+deps:
+  - keyutils-libs_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libkeyutils.so.*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/keyutils-libs/LICENCE.LGPL:

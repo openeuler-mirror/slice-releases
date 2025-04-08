@@ -1,0 +1,17 @@
+package: libdb
+
+deps:
+  - libdb_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libdb-5.3.so:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/libdb/LICENSE:

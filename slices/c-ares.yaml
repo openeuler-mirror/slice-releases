@@ -1,0 +1,17 @@
+package: c-ares
+
+deps:
+  - c-ares_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libcares.so.2*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/doc/c-ares/LICENSE.md:

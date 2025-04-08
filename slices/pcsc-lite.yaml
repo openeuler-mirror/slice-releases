@@ -1,0 +1,17 @@
+package: pcsc-lite
+
+deps:
+  - pcsc-lite_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libpcsclite.so.1*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/pcsc-lite/COPYING:

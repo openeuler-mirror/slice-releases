@@ -1,0 +1,19 @@
+package: brotli
+
+deps:
+  - brotli_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libbrotlicommon.so.1*:
+        /usr/lib64/libbrotlidec.so.1*:
+        /usr/lib64/libbrotlienc.so.1*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/brotli/LICENSE:

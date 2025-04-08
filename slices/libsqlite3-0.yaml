@@ -1,9 +1,0 @@
-package: sqlite
-
-slices:
-  libs:
-    deps:
-      - libc6_libs
-    contents:
-      common:
-        /usr/lib64/libsqlite3.so.0*:

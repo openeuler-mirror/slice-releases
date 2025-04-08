@@ -1,4 +1,4 @@
-package: tzdata-java-2024a
+package: tzdata-java
 
 slices:
   tzdb:

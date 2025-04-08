@@ -6,8 +6,8 @@ deps:
 slices:
   libs:
     deps:
-      - libc6_libs
-      - libtirpc3_libs
+      - glibc_libs
+      - libtirpc_libs
     contents:
       common:
         /usr/lib64/libnsl.so*:

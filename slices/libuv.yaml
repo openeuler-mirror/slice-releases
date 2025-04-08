@@ -1,0 +1,17 @@
+package: libuv
+
+deps:
+  - libuv_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libuv.so.1*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/libuv/LICENSE:
