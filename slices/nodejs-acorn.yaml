@@ -1,0 +1,34 @@
+package: nodejs-acorn
+
+deps:
+  - nodejs-acorn_copyright
+
+slices:
+  libs:
+    deps:
+      - nodejs-xtend_libs
+    contents:
+      # basically avoiding all the .map files (line tables) and unittest drivers
+      /usr/bin/acorn:
+      /usr/lib/node_modules/acorn:
+      /usr/lib/node_modules/acorn/bin:
+      /usr/lib/node_modules/acorn/bin/acorn:
+      /usr/lib/node_modules/acorn/bin/generate-identifier-regex.js:
+      /usr/lib/node_modules/acorn/bin/run_test262.js:
+      /usr/lib/node_modules/acorn/bin/test262.whitelist:
+      /usr/lib/node_modules/acorn/bin/update_authors.sh:
+      /usr/lib/node_modules/acorn/dist:
+      /usr/lib/node_modules/acorn/dist/acorn.es.js:
+      /usr/lib/node_modules/acorn/dist/acorn.js:
+      /usr/lib/node_modules/acorn/dist/acorn_csp.js:
+      /usr/lib/node_modules/acorn/dist/acorn_loose.es.js:
+      /usr/lib/node_modules/acorn/dist/acorn_loose.js:
+      /usr/lib/node_modules/acorn/dist/walk.es.js:
+      /usr/lib/node_modules/acorn/dist/walk.js:
+      /usr/lib/node_modules/acorn/package.json:
+
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/nodejs-acorn/LICENSE:

@@ -1,28 +1,28 @@
 package: java-21-openjdk-headless
 
 deps:
-  - openjdk-21-jre-headless_copyright
+  - java-21-openjdk-headless_copyright
 
 slices:
 
   # A set of slices to run headless openjdk runtime
   standard:
     deps:
-      - openjdk-21-jre-headless_class-data-sharing
-      - openjdk-21-jre-headless_console
-      - openjdk-21-jre-headless_core
-      - openjdk-21-jre-headless_debug
-      - openjdk-21-jre-headless_jfr
-      - openjdk-21-jre-headless_management
-      - openjdk-21-jre-headless_prefs
-      - openjdk-21-jre-headless_rmi
-      - openjdk-21-jre-headless_security
-      - openjdk-21-jre-headless_tools
+      - java-21-openjdk-headless_class-data-sharing
+      - java-21-openjdk-headless_console
+      - java-21-openjdk-headless_core
+      - java-21-openjdk-headless_debug
+      - java-21-openjdk-headless_jfr
+      - java-21-openjdk-headless_management
+      - java-21-openjdk-headless_prefs
+      - java-21-openjdk-headless_rmi
+      - java-21-openjdk-headless_security
+      - java-21-openjdk-headless_tools
 
   # List of classes required to create the Class Data Sharing archive
   class-data-sharing:
     deps:
-      - openjdk-21-jre-headless_core
+      - java-21-openjdk-headless_core
     contents:
       common:
         /usr/lib/jvm/java-21-openjdk-*/lib/classlist:
@@ -39,10 +39,10 @@ slices:
   # - liblcms2-2                     - used in awt, not relevant
   core:
     deps:
-      - libc6_libs
-      - libgcc-s1_libs
-      - libstdc++6_libs
-      - zlib1g_libs
+      - glibc_libs
+      - libgcc_libs
+      - libstdc++_libs
+      - zlib_libs
       - tzdata-java_tzdb
     contents:
       common:
@@ -81,7 +81,7 @@ slices:
   # Native part of jdk.prefs modules
   prefs:
     deps:
-      - openjdk-21-jre-headless_core
+      - java-21-openjdk-headless_core
     contents:
       common:
         /usr/lib/jvm/java-21-openjdk-*/lib/libprefs.so:
@@ -89,7 +89,7 @@ slices:
   # Native part of java.rmi
   rmi:
     deps:
-      - openjdk-21-jre-headless_security
+      - java-21-openjdk-headless_security
     contents:
       common:
         /usr/lib/jvm/java-21-openjdk-*/bin/rmiregistry:
@@ -98,7 +98,7 @@ slices:
   # Native part of the console support
   console:
     deps:
-      - openjdk-21-jre-headless_core
+      - java-21-openjdk-headless_core
     contents:
       common:
         /usr/lib/jvm/java-21-openjdk-*/lib/lible.so:
@@ -106,7 +106,7 @@ slices:
   # Debug support
   debug:
     deps:
-      - openjdk-21-jre-headless_core
+      - java-21-openjdk-headless_core
     contents:
       common:
         /usr/lib/jvm/java-21-openjdk-*/lib/libattach.so:
@@ -124,7 +124,7 @@ slices:
   # Configuration and native part of Java Management Extensions
   management:
     deps:
-      - openjdk-21-jre-headless_rmi
+      - java-21-openjdk-headless_rmi
     contents:
       common:
         /etc/java/java-21-openjdk/java-21-openjdk-*/conf/management/jmxremote.access:
@@ -138,9 +138,9 @@ slices:
   # Security configuration files and native libraries
   security:
     deps:
-      - libnss3_nss
-      - libpcsclite1_libs
-      - openjdk-21-jre-headless_core
+      - nss_nss
+      - pcsc-lite_libs
+      - java-21-openjdk-headless_core
     contents:
       common:
         /etc/java/java-21-openjdk/java-21-openjdk-*/lib/security/blocked.certs:
@@ -170,7 +170,7 @@ slices:
   # OpenJDK tools
   tools:
     deps:
-      - openjdk-21-jre-headless_security
+      - java-21-openjdk-headless_security
     contents:
       common:
         /usr/lib/jvm/java-21-openjdk-*/bin/keytool:
@@ -178,7 +178,7 @@ slices:
   # Java Flight Recorder configuration and jar file
   jfr:
     deps:
-      - openjdk-21-jre-headless_core
+      - java-21-openjdk-headless_core
     contents:
       common:
         /usr/lib/jvm/java-21-openjdk-*/lib/jfr/default.jfc:

@@ -1,0 +1,15 @@
+package: setup
+
+deps:
+  - setup_copyright
+
+slices:
+  config:
+    contents:
+      common:
+        /etc/inputrc:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/setup/COPYING:

@@ -1,0 +1,17 @@
+package: libnghttp2
+
+deps:
+  - libnghttp2_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libnghttp2.so.14*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/libnghttp2/COPYING:

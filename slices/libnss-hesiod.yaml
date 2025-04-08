@@ -1,7 +1,0 @@
-#download: glibc-nss-devel
-#
-#slices:
-#  libs:
-#    contents:
-#      common:
-#        /usr/lib64/libnss_hesiod.so.*:

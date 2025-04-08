@@ -1,0 +1,17 @@
+package: libffi
+
+deps:
+  - libffi_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libffi.so.8*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/libffi/LICENSE:

@@ -1,0 +1,20 @@
+package: readline
+
+deps:
+  - readline_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+      - ncurses-libs_libs
+      - setup_config
+    contents:
+      common:
+        /usr/lib64/libhistory.so.8*:
+        /usr/lib64/libreadline.so.8*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/readline/COPYING:

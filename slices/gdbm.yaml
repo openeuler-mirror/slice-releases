@@ -1,0 +1,18 @@
+package: gdbm
+
+deps:
+  - gdbm_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libgdbm.so*:
+        /usr/lib64/libgdbm_compat.so*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/gdbm/COPYING:

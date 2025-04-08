@@ -1,0 +1,17 @@
+package: bzip2
+
+deps:
+  - bzip2_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libbz2.so.1*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/licenses/bzip2/LICENSE:

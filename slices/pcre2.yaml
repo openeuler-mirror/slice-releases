@@ -1,0 +1,17 @@
+package: pcre2
+
+deps:
+  - pcre2_copyright
+
+slices:
+  libs:
+    deps:
+      - glibc_libs
+    contents:
+      common:
+        /usr/lib64/libpcre2-8.so*:
+
+  copyright:
+    contents:
+      common:
+        /usr/share/doc/pcre2/LICENCE:
