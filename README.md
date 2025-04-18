@@ -1,3 +1,5 @@
+中文 | [English](README.en.md)
+
 # slice-releases
 
 #### 介绍
@@ -51,7 +53,7 @@ SDF的文件名为`{package}.yaml`, `{package}`是软件包名，内容如下：
 
 
 #### 如何使用
-slice releases与[splitter](https://gitee.com/openeuler/splitter)一起使用。在使用splitter切分软件包生成slice时，用户必须指定通过`--release`指定slice release>
+slice releases与[splitter](https://gitee.com/openeuler/splitter)一起使用。在使用splitter切分软件包生成slice时，用户必须指定通过`--release`指定slice release。
 
 #### 参与贡献
 欢迎广大开发者参与openEuler distroless镜像生态建设！
